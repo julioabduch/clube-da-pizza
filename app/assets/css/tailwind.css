@@ -1,0 +1,6 @@
+/* Importar estilos personalizados do Toastification */
+@import './toastification.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

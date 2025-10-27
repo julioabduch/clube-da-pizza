@@ -1,0 +1,154 @@
+/* Estilos personalizados para Vue Toastification integrados ao sistema de cores do Clube Pizza */
+
+/* Container dos toasts */
+.Vue-Toastification__container {
+  z-index: 9999;
+}
+
+/* Toast base personalizado */
+.clube-pizza-toast {
+  @apply rounded-xl shadow-medium border;
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* Toast de sucesso - integrado ao sistema de cores */
+.Vue-Toastification__toast--success.clube-pizza-toast {
+  @apply bg-background-primary border-success border-opacity-20;
+}
+
+.Vue-Toastification__toast--success .Vue-Toastification__toast-body {
+  @apply text-text-primary;
+}
+
+.Vue-Toastification__toast--success .Vue-Toastification__icon {
+  @apply text-success;
+}
+
+.Vue-Toastification__toast--success .Vue-Toastification__progress-bar {
+  @apply bg-success;
+}
+
+/* Toast de erro - integrado ao sistema de cores */
+.Vue-Toastification__toast--error.clube-pizza-toast {
+  @apply bg-background-primary border-error border-opacity-20;
+}
+
+.Vue-Toastification__toast--error .Vue-Toastification__toast-body {
+  @apply text-text-primary;
+}
+
+.Vue-Toastification__toast--error .Vue-Toastification__icon {
+  @apply text-error;
+}
+
+.Vue-Toastification__toast--error .Vue-Toastification__progress-bar {
+  @apply bg-error;
+}
+
+/* Toast de aviso - integrado ao sistema de cores */
+.Vue-Toastification__toast--warning.clube-pizza-toast {
+  @apply bg-background-primary border-warning border-opacity-20;
+}
+
+.Vue-Toastification__toast--warning .Vue-Toastification__toast-body {
+  @apply text-text-primary;
+}
+
+.Vue-Toastification__toast--warning .Vue-Toastification__icon {
+  @apply text-warning;
+}
+
+.Vue-Toastification__toast--warning .Vue-Toastification__progress-bar {
+  @apply bg-warning;
+}
+
+/* Toast de info - integrado ao sistema de cores */
+.Vue-Toastification__toast--info.clube-pizza-toast {
+  @apply bg-background-primary border-info border-opacity-20;
+}
+
+.Vue-Toastification__toast--info .Vue-Toastification__toast-body {
+  @apply text-text-primary;
+}
+
+.Vue-Toastification__toast--info .Vue-Toastification__icon {
+  @apply text-info;
+}
+
+.Vue-Toastification__toast--info .Vue-Toastification__progress-bar {
+  @apply bg-info;
+}
+
+/* Toast padrão - integrado ao sistema de cores */
+.Vue-Toastification__toast--default.clube-pizza-toast {
+  @apply bg-background-primary border-primary-500 border-opacity-20;
+}
+
+.Vue-Toastification__toast--default .Vue-Toastification__toast-body {
+  @apply text-text-primary;
+}
+
+.Vue-Toastification__toast--default .Vue-Toastification__icon {
+  @apply text-primary-500;
+}
+
+.Vue-Toastification__toast--default .Vue-Toastification__progress-bar {
+  @apply bg-primary-500;
+}
+
+/* Botão de fechar personalizado */
+.Vue-Toastification__close-button {
+  @apply text-text-secondary hover:text-text-primary transition-colors;
+  opacity: 0.7;
+}
+
+.Vue-Toastification__close-button:hover {
+  opacity: 1;
+}
+
+/* Animações suavizadas */
+.Vue-Toastification__bounce-enter-active {
+  animation-duration: 0.3s;
+}
+
+.Vue-Toastification__bounce-leave-active {
+  animation-duration: 0.2s;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 640px) {
+  .Vue-Toastification__container {
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+  }
+  
+  .clube-pizza-toast {
+    margin-bottom: 0.5rem;
+    border-radius: 0.75rem;
+    font-size: 0.8125rem;
+  }
+}
+
+/* Efeitos hover para interação */
+.clube-pizza-toast:hover {
+  @apply shadow-medium;
+  transform: translateY(-1px);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Estilos para toast com ícones personalizados */
+.Vue-Toastification__toast-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Ajustes para textos longos */
+.Vue-Toastification__toast-body {
+  line-height: 1.4;
+  word-break: break-word;
+}
