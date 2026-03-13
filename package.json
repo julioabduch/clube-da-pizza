@@ -7,7 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "echo 'Skip postinstall'"
+    "postinstall": "test -f node_modules/tinyexec/dist/main.mjs && cp node_modules/tinyexec/dist/main.mjs node_modules/tinyexec/dist/main.js || echo 'tinyexec fix skipped'"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.23",
