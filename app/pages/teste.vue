@@ -1,27 +1,27 @@
 <template>
-  <div class="min-h-screen bg-gradient-hero py-12">
+  <div class="min-h-screen bg-gradient-hero py-8 sm:py-12">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Cabeçalho -->
-      <div class="text-center mb-12">
-        <h1 class="text-4xl font-bold text-text-primary mb-4">
+      <div class="text-center mb-8 sm:mb-12">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-primary mb-4">
           🧪 Página de Teste - Componentes Base
         </h1>
-        <p class="text-lg text-text-secondary">
+        <p class="text-base sm:text-lg text-text-secondary">
           Avaliação dos componentes BaseButton e BaseInput
         </p>
       </div>
 
       <!-- Seção BaseButton -->
-      <section class="bg-background-primary rounded-xl shadow-medium p-8 mb-8">
-        <h2 class="text-2xl font-bold text-text-primary mb-6 flex items-center">
-          <BaseIcon name="sparkles" size="lg" color="primary" class="mr-3" />
+      <section class="bg-background-primary rounded-xl shadow-medium p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8">
+        <h2 class="text-lg sm:text-xl lg:text-2xl font-bold text-text-primary mb-4 sm:mb-6 flex items-center">
+          <BaseIcon name="sparkles" size="md" lg:size="lg" color="primary" class="mr-2 sm:mr-3" />
           BaseButton - Variantes e Tamanhos
         </h2>
 
         <!-- Variantes -->
-        <div class="mb-8">
-          <h3 class="text-lg font-semibold text-text-primary mb-4">Variantes</h3>
-          <div class="flex flex-wrap gap-4">
+        <div class="mb-6 sm:mb-8">
+          <h3 class="text-base sm:text-lg font-semibold text-text-primary mb-3 sm:mb-4">Variantes</h3>
+          <div class="flex flex-wrap gap-2 sm:gap-4">
             <BaseButton variant="primary" @click="handleClick('Primary')">
               Primary Button
             </BaseButton>
@@ -45,9 +45,9 @@
         </div>
 
         <!-- Tamanhos -->
-        <div class="mb-8">
-          <h3 class="text-lg font-semibold text-text-primary mb-4">Tamanhos</h3>
-          <div class="flex flex-wrap items-center gap-4">
+        <div class="mb-6 sm:mb-8">
+          <h3 class="text-base sm:text-lg font-semibold text-text-primary mb-3 sm:mb-4">Tamanhos</h3>
+          <div class="flex flex-wrap items-center gap-2 sm:gap-4">
             <BaseButton size="sm" variant="primary">
               Small
             </BaseButton>
@@ -63,9 +63,9 @@
         </div>
 
         <!-- Estados -->
-        <div class="mb-8">
-          <h3 class="text-lg font-semibold text-text-primary mb-4">Estados</h3>
-          <div class="flex flex-wrap gap-4">
+        <div class="mb-6 sm:mb-8">
+          <h3 class="text-base sm:text-lg font-semibold text-text-primary mb-3 sm:mb-4">Estados</h3>
+          <div class="flex flex-wrap gap-2 sm:gap-4">
             <BaseButton variant="primary">
               Normal
             </BaseButton>
@@ -78,8 +78,8 @@
 
         <!-- Com ícones -->
         <div>
-          <h3 class="text-lg font-semibold text-text-primary mb-4">Com Ícones</h3>
-          <div class="flex flex-wrap gap-4">
+          <h3 class="text-base sm:text-lg font-semibold text-text-primary mb-3 sm:mb-4">Com Ícones</h3>
+          <div class="flex flex-wrap gap-2 sm:gap-4">
             <BaseButton variant="primary" @click="handleClick('Download')">
               <BaseIcon name="arrow-right" size="sm" class="mr-2" />
               Download
@@ -99,15 +99,15 @@
       </section>
 
       <!-- Seção BaseInput -->
-      <section class="bg-background-primary rounded-xl shadow-medium p-8 mb-8">
-        <h2 class="text-2xl font-bold text-text-primary mb-6 flex items-center">
-          <BaseIcon name="user" size="lg" color="primary" class="mr-3" />
+      <section class="bg-background-primary rounded-xl shadow-medium p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8">
+        <h2 class="text-lg sm:text-xl lg:text-2xl font-bold text-text-primary mb-4 sm:mb-6 flex items-center">
+          <BaseIcon name="user" size="md" lg:size="lg" color="primary" class="mr-2 sm:mr-3" />
           BaseInput - Tipos e Estados
         </h2>
 
-        <div class="grid md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
           <!-- Coluna 1 -->
-          <div class="space-y-6">
+          <div class="space-y-4 sm:space-y-6">
             <!-- Input básico -->
             <BaseInput
               v-model="formData.nome"
@@ -150,7 +150,7 @@
           </div>
 
           <!-- Coluna 2 -->
-          <div class="space-y-6">
+          <div class="space-y-4 sm:space-y-6">
             <!-- Input number -->
             <BaseInput
               v-model="formData.idade"
@@ -205,7 +205,7 @@
         </div>
 
         <!-- Botões de ação -->
-        <div class="flex gap-4 mt-8 pt-6 border-t border-border-light">
+        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-border-light">
           <BaseButton 
             variant="primary" 
             @click="handleSubmit"
@@ -228,15 +228,15 @@
       </section>
 
       <!-- Seção de Debug -->
-      <section class="bg-background-secondary rounded-xl shadow-soft p-6">
-        <h3 class="text-lg font-semibold text-text-primary mb-4 flex items-center">
-          <BaseIcon name="info" size="md" color="info" class="mr-2" />
+      <section class="bg-background-secondary rounded-xl shadow-soft p-4 sm:p-6">
+        <h3 class="text-base sm:text-lg font-semibold text-text-primary mb-3 sm:mb-4 flex items-center">
+          <BaseIcon name="info" size="sm" sm:size="md" color="info" class="mr-2" />
           Debug - Valores do Formulário
         </h3>
         
-        <pre class="bg-neutral-800 text-neutral-100 p-4 rounded-lg text-sm overflow-auto">{{ JSON.stringify(formData, null, 2) }}</pre>
+        <pre class="bg-neutral-800 text-neutral-100 p-3 sm:p-4 rounded-lg text-xs sm:text-sm overflow-auto">{{ JSON.stringify(formData, null, 2) }}</pre>
         
-        <div class="mt-4 text-sm text-text-tertiary">
+        <div class="mt-3 sm:mt-4 text-xs sm:text-sm text-text-tertiary">
           <p><strong>Formulário válido:</strong> {{ isFormValid ? 'Sim' : 'Não' }}</p>
           <p><strong>Último clique:</strong> {{ lastClick || 'Nenhum' }}</p>
         </div>

@@ -8,7 +8,8 @@ applyTo: '**'
 Este documento é um **guia baseado em boas práticas e na documentação oficial**.  
 **Sempre siga as orientações do desenvolvedor responsável pelo projeto.**  
 Não é uma regra imutável — serve como referência para manter consistência, legibilidade e escalabilidade.
-
+---
+Atenção - sempre deixar as paginas responsivas para celular , tablet e desktop. Prioridade para mobile first.
 ---
 
 ## 1) Estrutura de pastas (Nuxt 4)

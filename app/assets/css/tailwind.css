@@ -1,6 +1,60 @@
-/* Importar estilos personalizados do Toastification */
-@import './toastification.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Otimizações para dispositivos móveis */
+@layer base {
+  /* Prevenir zoom em inputs no iOS */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="number"],
+  input[type="search"],
+  select,
+  textarea {
+    font-size: 16px;
+  }
+  
+  /* Melhorar touch targets para mobile */
+  button,
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+  }
+  
+  /* Scroll suave */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Melhorar legibilidade em telas pequenas */
+  @media (max-width: 640px) {
+    body {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+}
+
+@layer utilities {
+  /* Utilitários personalizados para responsividade */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .safe-area-inset {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  .safe-area-inset-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
