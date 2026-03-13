@@ -10,7 +10,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, toRef } from 'vue'
+import { useIcon } from '~/composables/useIcon'
 
 interface Props {
   /** Nome do ícone (ex: 'home', 'user', 'cart') */
@@ -30,9 +31,11 @@ const props = withDefaults(defineProps<Props>(), {
   color: 'neutral'
 })
 
-// Composable para obter o ícone
-const { useIcon } = await import('~/composables/useIcon')
-const iconComponent = useIcon(props.name)
+// Obter o componente de ícone de forma reativa
+const iconComponent = computed(() => useIcon(props.name))
+
+// Referência para ariaLabel (exposta no template)
+const ariaLabel = toRef(props, 'ariaLabel')
 
 // Classes de tamanho
 const sizeClasses = {
@@ -60,14 +63,15 @@ const colorClasses = {
 // Computed para classes do ícone
 const iconClasses = computed(() => {
   const classes = [
-    sizeClasses[props.size],
-    colorClasses[props.color]
+    // proteger caso props.size seja indefinido
+    sizeClasses[props.size ?? 'md'],
+    colorClasses[props.color ?? 'neutral']
   ]
   
   if (props.class) {
     classes.push(props.class)
   }
   
-  return classes.join(' ')
+  return classes.filter(Boolean).join(' ')
 })
 </script>

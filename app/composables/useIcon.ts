@@ -13,6 +13,7 @@ import {
   MinusIcon,
   XMarkIcon,
   CheckIcon,
+  UserPlusIcon,
   
   // Ícones de setas
   ChevronDownIcon,
@@ -28,6 +29,10 @@ import {
   HeartIcon,
   StarIcon,
   ShoppingCartIcon,
+  EyeIcon,
+  EyeSlashIcon,
+  KeyIcon,
+  DocumentIcon,
   
   // Ícones de comunicação
   EnvelopeIcon,
@@ -49,7 +54,10 @@ import {
   TruckIcon,
   GiftIcon,
   SparklesIcon,
-  FireIcon
+  FireIcon,
+  CalendarIcon,
+  // Adicionando ícone de pizza temporário (usando prato)
+  CircleStackIcon as PizzaIcon
 } from '@heroicons/vue/24/outline'
 
 // Ícones sólidos para estados ativos/preenchidos
@@ -84,6 +92,7 @@ const OUTLINE_ICONS: IconMap = {
   minus: MinusIcon,
   close: XMarkIcon,
   check: CheckIcon,
+  'user-plus': UserPlusIcon,
   
   // Setas
   'chevron-down': ChevronDownIcon,
@@ -99,9 +108,14 @@ const OUTLINE_ICONS: IconMap = {
   heart: HeartIcon,
   star: StarIcon,
   cart: ShoppingCartIcon,
+  eye: EyeIcon,
+  'eye-slash': EyeSlashIcon,
+  key: KeyIcon,
+  document: DocumentIcon,
   
   // Comunicação
   email: EnvelopeIcon,
+  envelope: EnvelopeIcon,
   phone: PhoneIcon,
   chat: ChatBubbleLeftRightIcon,
   share: ShareIcon,
@@ -118,7 +132,9 @@ const OUTLINE_ICONS: IconMap = {
   delivery: TruckIcon,
   gift: GiftIcon,
   sparkles: SparklesIcon,
-  fire: FireIcon
+  fire: FireIcon,
+  calendar: CalendarIcon,
+  pizza: PizzaIcon
 }
 
 const SOLID_ICONS: IconMap = {

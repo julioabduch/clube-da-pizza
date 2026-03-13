@@ -6,31 +6,88 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[]
 
+export type SubscriptionStatus = 
+  | 'trial'      // Período de teste (7 dias)
+  | 'ativa'      // Assinatura ativa
+  | 'atrasada'   // Pagamento atrasado (até 7 dias)
+  | 'cancelada'  // Cancelada (mais de 7 dias de atraso)
+  | 'pendente'   // Trial expirado sem assinatura
+
 export interface Database {
   public: {
     Tables: {
-      // Add your table definitions here
-      // Example:
-      // users: {
-      //   Row: {
-      //     id: string
-      //     email: string
-      //     created_at: string
-      //   }
-      //   Insert: {
-      //     id?: string
-      //     email: string
-      //     created_at?: string
-      //   }
-      //   Update: {
-      //     id?: string
-      //     email?: string
-      //     created_at?: string
-      //   }
-      // }
+      pag_usuarios: {
+        Row: {
+          id: number
+          created_at: string
+          user_id: string | null
+          email: string
+          customer: string | null
+          data_expiracao: string
+          subscription_id: string | null
+          data_vencimento: string | null
+          ordens_limite: number
+        }
+        Insert: {
+          id?: number
+          created_at?: string
+          user_id?: string | null
+          email: string
+          customer?: string | null
+          data_expiracao?: string
+          subscription_id?: string | null
+          data_vencimento?: string | null
+          ordens_limite?: number
+        }
+        Update: {
+          id?: number
+          created_at?: string
+          user_id?: string | null
+          email?: string
+          customer?: string | null
+          data_expiracao?: string
+          subscription_id?: string | null
+          data_vencimento?: string | null
+          ordens_limite?: number
+        }
+      }
+      pag_ordens: {
+        Row: {
+          id: number
+          created_at: string
+          user_id: string | null
+          nome_ordem: string
+        }
+        Insert: {
+          id?: number
+          created_at?: string
+          user_id?: string | null
+          nome_ordem: string
+        }
+        Update: {
+          id?: number
+          created_at?: string
+          user_id?: string | null
+          nome_ordem?: string
+        }
+      }
     }
     Views: {
-      // Add your view definitions here
+      pag_usuarios_view: {
+        Row: {
+          id: number
+          created_at: string
+          user_id: string | null
+          email: string
+          customer: string | null
+          data_expiracao: string
+          subscription_id: string | null
+          data_vencimento: string | null
+          ordens_limite: number
+          ordens_criadas: number
+          status: SubscriptionStatus
+        }
+      }
     }
     Functions: {
       // Add your function definitions here

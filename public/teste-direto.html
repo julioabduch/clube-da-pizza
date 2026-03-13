@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste Direto - Clube Pizza</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 40px;
+      margin: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: white;
+      color: #667eea;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 10px;
+      transition: transform 0.2s;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🍕 Teste HTML Direto</h1>
+    <p><strong>Se você está vendo isso, o servidor está funcionando!</strong></p>
+    
+    <p>Este é um arquivo HTML puro sem Vue/Nuxt para testar se o problema é com o framework.</p>
+    
+    <div style="margin-top: 30px;">
+      <a href="/" class="btn">Ir para Home (Nuxt)</a>
+      <a href="/test-simple" class="btn">Teste Simples (Vue)</a>
+      <a href="/login" class="btn">Login</a>
+    </div>
+    
+    <div style="margin-top: 40px; background: rgba(0,0,0,0.3); padding: 20px; border-radius: 10px;">
+      <h3>📋 Checklist:</h3>
+      <ul style="text-align: left; font-size: 16px;">
+        <li>✅ Servidor Node rodando</li>
+        <li>✅ Vite funcionando</li>
+        <li>✅ HTML renderizando</li>
+        <li>❓ Nuxt carregando?</li>
+        <li>❓ Vue funcionando?</li>
+        <li>❓ Supabase causando problema?</li>
+      </ul>
+    </div>
+  </div>
+  
+  <script>
+    console.log('✅ HTML puro carregado com sucesso!');
+    console.log('Se você ver isso, JavaScript está funcionando.');
+  </script>
+</body>
+</html>
