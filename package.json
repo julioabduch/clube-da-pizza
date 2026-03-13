@@ -7,7 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "test -f node_modules/tinyexec/dist/main.mjs && cp node_modules/tinyexec/dist/main.mjs node_modules/tinyexec/dist/main.js || echo 'tinyexec fix skipped'"
+    "postinstall": "node -e \"const fs = require('fs'); const src = 'node_modules/tinyexec/dist/main.mjs'; const dest = 'node_modules/tinyexec/dist/main.js'; if (fs.existsSync(src)) { fs.copyFileSync(src, dest); console.log('✅ tinyexec fix applied'); } else { console.log('⚠️ tinyexec fix skipped'); }\""
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.23",
