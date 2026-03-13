@@ -7,7 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "echo 'Skip postinstall'"
+    "postinstall": "node scripts/postinstall.mjs"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.23",
