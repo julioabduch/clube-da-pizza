@@ -7,7 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "node --input-type=module -e \"import { copyFileSync, existsSync } from 'fs'; const src = 'node_modules/tinyexec/dist/main.mjs'; const dest = 'node_modules/tinyexec/dist/main.js'; if (existsSync(src)) { copyFileSync(src, dest); console.log('✅ tinyexec fix applied'); } else { console.log('⚠️ tinyexec not found'); }\""
+    "postinstall": "node scripts/postinstall.mjs"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.23",
